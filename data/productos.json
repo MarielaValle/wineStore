@@ -1,192 +1,169 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "DV CATENA CABERNET MALBEC",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Blend",
-        "precio": "896.00",
-        "descuento": "10 ",
-        "descripcionCorta":"Cabernet Sauvignon: La Pirámide (Agrelo, Luján de Cuyo); Malbec: Angélica (Lunlunta, Maipú). Provincia de Mendoza, Argentina.
-        50% Cabernet Sauvignon | 50% Malbec",
-        "crianza": " ",
-        "descripcionLarga":"DV Catena Cabernet Sauvignon-Malbec es un vino elegante y complejo, de color rojo rubi con reflejos violetas.
-        A la nariz, intenso y concentrado, presenta notas de especias aportadas por el Cabernet Sauvignon del viñedo La Pirámide, y notas de moras maduras y ciruelas, características del Malbec del viñedo Angélica, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. 
-        En boca, de impacto dulce y gran complejidad, con taninos integrados y redondos, de final largo y persistente.",
-       "característica": " ",
-        "imágen": " "
+        "precio": 896,
+        "descuento": 10,
+        "descripcionCorta": "Cabernet Sauvignon: La Pirámide (Agrelo, Luján de Cuyo); Malbec: Angélica (Lunlunta, Maipú). Provincia de Mendoza, Argentina. 50% Cabernet Sauvignon | 50% Malbec",
+        "crianza": " null",
+        "descripcionLarga": "DV Catena Cabernet Sauvignon-Malbec es un vino elegante y complejo, de color rojo rubi con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de especias aportadas por el Cabernet Sauvignon del viñedo La Pirámide, y notas de moras maduras y ciruelas, características del Malbec del viñedo Angélica, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, con taninos integrados y redondos, de final largo y persistente.",
+        "característica": " ",
+        "imagen": "id-1.jpg"
     },
     {
-        "id": "2",
+        "id": 2,
         "nombre": "EL ENEMIGO MALBEC",
         "color": "tinto",
-        "categoría": " ",
+        "categoría": "null ",
         "variedad": "Malbec",
-        "precio": "1300",
-        "descuento": "10",
+        "precio": 1300,
+        "descuento": 10,
         "descripcionCorta": " De Gualtallary. Provincia de Mendoza, Argentina. 89% Malbec | 11% Petit Verdot",
         "crianza": "14 meses de crianza en barricas de roble francés.",
-        "descripcionLarga":"En vista un rojo rubí de alta intensidad y destellos violáceos.
-       En nariz mucha madera. Tardó en abrirse en copa y luego del agite aparece fruta roja madura.
-       En boca, un ataque brutal al paladar. Algo dulce y carnoso de muy buen equilibrio y acidez con taninos muy marcados.",
-       "característica": " ",
-        "imagen": " "
+        "descripcionLarga": "En vista un rojo rubí de alta intensidad y destellos violáceos. En nariz mucha madera. Tardó en abrirse en copa y luego del agite aparece fruta roja madura. En boca, un ataque brutal al paladar. Algo dulce y carnoso de muy buen equilibrio y acidez con taninos muy marcados.",
+        "característica": "null ",
+        "imagen": "id-2.jpg "
     },
     {
-        "id": "3",
+        "id": 3,
         "nombre": "NICASIA VINEYARDS RED BLEND CABERNET FRANC",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Cabernet Franc",
-        "precio": "644",
-        "descuento": "15",
+        "precio": 644,
+        "descuento": 15,
         "descripcionCorta": "Fermentación: Max Temp Ferm. 27º, durante 12 días. 18 días maceración pelicular. Fermentación maloláctica completa. 90% Cabernet Franc | 7% Merlot | 3% Petit Verdo",
         "crianza": "12 meses en roble francés, 30% nuevo.",
-        "descripcionLarga":"Se perciben en este vino elegantes notas herbáceas y de anís aportadas por el Cabernet Franc, junto a vivaces frutos negros y especias conferidos por el Merlot y el Petit Verdot.
-    El paso por roble incrementa aún más la complejidad de este vino, otorgando delicados toques ahumados y de tostado.",
-    "característica": " ",
-        "imagen": " "
+        "descripcionLarga": "Se perciben en este vino elegantes notas herbáceas y de anís aportadas por el Cabernet Franc, junto a vivaces frutos negros y especias conferidos por el Merlot y el Petit Verdot. El paso por roble incrementa aún más la complejidad de este vino, otorgando delicados toques ahumados y de tostado.",
+        "característica": " ",
+        "imagen": "id-3.jpg "
     },
     {
-        "id": "4 ",
+        "id": 4,
         "nombre": "ANTIGAL 1 MALBEC",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Malbec",
-        "precio": "900",
-        "decuento": "15",
+        "precio": 900,
+        "decuento": 15,
         "descripcionCorta": "De provincia de Mendoza, Argentina. 100% Malbec",
         "crianza": " ",
-        "descripcionLarga":"Color: Color rojo muy intenso con destellos violáceos típicos de la variedad.
-    Nariz: En nariz posee una intensidad de fruta muy importante acompañada de notas de roble dado su paso por barricas nuevas de roble francés (75%) y americano (25%) durante 13 meses.
-    Boca: En boca es suave y concentrado, características típicas de un Malbec Argentino. Equilibrado, madera suave y elegante..",
-    "característica": " ",
-        "imagen": " ",
+        "descripcionLarga": "Color: Color rojo muy intenso con destellos violáceos típicos de la variedad. Nariz: En nariz posee una intensidad de fruta muy importante acompañada de notas de roble dado su paso por barricas nuevas de roble francés (75%) y americano (25%) durante 13 meses. Boca: En boca es suave y concentrado, características típicas de un Malbec Argentino. Equilibrado, madera suave y elegante.",
+        "característica": " ",
+        "imagen": "id-4.jpg"
     },
     {
-        "id": "5 ",
+        "id": 5,
         "nombre": "CABRINI LICOROSO DE MISA",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Blend",
-        "precio": "329",
-        "descuento": " 5",
+        "precio": 329,
+        "descuento": 5,
         "descripcionCorta": "De Luján de Cuyo y Tupungato. Provincia de Mendoza, Argentina. Malbec | Tempranillo | Bonarda | Lambrusco ",
         "crianza": " ",
-        "descripcionLarga":"Vista: Rosado, color rojizo cobrizo con destellos dorados. Se presenta con aspecto untuoso, con lágrima lenta y gruesa.
-    Nariz: Presenta aromas complejos de fondo, notas de frutas maduras como guindas, cerezas y un aroma particular que recuerda al dulce de membrillo. Luego encontramos un dejo de los aromas aportados por la madera.
-    Boca: Suave y delicado, dulce equilibrado con ligera acidez, sabores maduros y persistentes.",
-   "característica": " ",
-        "image": " "
+        "descripcionLarga": "Vista: Rosado, color rojizo cobrizo con destellos dorados. Se presenta con aspecto untuoso, con lágrima lenta y gruesa. Nariz: Presenta aromas complejos de fondo, notas de frutas maduras como guindas, cerezas y un aroma particular que recuerda al dulce de membrillo. Luego encontramos un dejo de los aromas aportados por la madera. Boca: Suave y delicado, dulce equilibrado con ligera acidez, sabores maduros y persistentes.",
+        "característica": " ",
+        "imagen": "id-5.jpg "
     },
     {
-        "id": "6",
+        "id": 6,
         "nombre": "FAMIGLIA BIANCHI MALBEC ORGÁNICO ",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Malbec",
-        "precio": "583",
-        "decuento": "15",
-        "descripcionCorta": "Famiglia Bianchi Malbec Orgánico se encuentra elaborado exclusivamente con uvas orgánicas reflejando el respeto de Bodegas Bianchi por la naturaleza. La línea Famiglia, reconocida internacionalmente, nos acerca una gama de vinos complejos e intensos que logran expresar de manera inigualable, las particularidades propias de los viñedos de San Rafael, Mendoza. ",
+        "precio": 583,
+        "decuento": 15,
+        "descripcionCorta": "Famiglia Bianchi Malbec Orgánico se encuentra elaborado exclusivamente con uvas orgánicas reflejando el respeto de Bodegas Bianchi por la naturaleza. La línea Famiglia, reconocida internacionalmente, nos acerca una gama de vinos complejos e intensos que logran expresar de manera inigualable, las particularidades propias de los viñedos de San Rafael, Mendoza.",
         "crianza": "10 meses en barricas de roble francés. ",
-        "descripcionLarga":"De color profundo de tintes violáceos.
-        Presenta aromas frutados que se mezclan con toques especiados, resaltando chocolate, café tostado y vainilla debido a su paso por barricas de roble francés y americano, logrando exaltar equilibrio y elegancia. 
-        De buena presencia en boca, redondo con taninos dulces y maduros. ",
-       "característica": " ",
-        "image": " ",
+        "descripcionLarga": "De color profundo de tintes violáceos. Presenta aromas frutados que se mezclan con toques especiados, resaltando chocolate, café tostado y vainilla debido a su paso por barricas de roble francés y americano, logrando exaltar equilibrio y elegancia. De buena presencia en boca, redondo con taninos dulces y maduros.",
+        "característica": "Recomendado ",
+        "imagen": "id-6.jpg "
     },
     {
-        "id": "7",
+        "id": 7,
         "nombre": "Red Blend",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Malbec",
-        "precio": "780",
-        "descuento": "10",
+        "precio": 780,
+        "descuento": 10,
         "descripcionCorta": "Del Valle de Uco, Mendoza, Cosecha manual, 11% Merlot, 4% Cabernet Sauvignon, ",
         "crianza": "tiempo en barrica 10 meses, tiempo en botella 8 meses",
-        "descripcionLarga":"Un blend que se caracteriza por tener un color intenso, profundo, con reflejos violáceos, vivos e impactantes. Sin duda característicos de su terroir.
- En nariz es un verdadera canasta de frutas entremezcladas con algunas especias, muy bien amalgamadas con las notas de vainilla aportadas por su crianza en roble.
- Un vino complejo, de gran cuerpo y estructura con un centro de boca exquisito, manifestando su concentración, cuerpo y volumen.",
-   "característica": " ",
-        "image": " "
+        "descripcionLarga": "Un blend que se caracteriza por tener un color intenso, profundo, con reflejos violáceos, vivos e impactantes. Sin duda característicos de su terroir. En nariz es un verdadera canasta de frutas entremezcladas con algunas especias, muy bien amalgamadas con las notas de vainilla aportadas por su crianza en roble. Un vino complejo, de gran cuerpo y estructura con un centro de boca exquisito, manifestando su concentración, cuerpo y volumen.",
+        "característica": "Recomendado ",
+        "imagen": "id-7.jpg "
     },
     {
-        "id": "8",
+        "id": 8,
         "nombre": "Phebuc Malbec",
         "color": "tinto",
         "categoría": " ",
         "variedad": "Malbec",
-        "precio": "318",
-        "descuento": "5",
+        "precio": 318,
+        "descuento": 5,
         "descripcionCorta": "De Luján de Cuyo. Provincia de Mendoza, Argentina. 100% Malbec",
         "crianza": " ",
-        "descripcionLarga": "Cosecha: Manual. Mesa de selección de racimos. Fermentación: con levaduras seleccionadas y temperatura controlada a 25 °C. Se realizan cuatro remontajes diarios y maceración de 20 días. Fue estacionado en tanques de acero inoxidable durante 10 meses. ",
+        "descripcionLarga": "Cosecha: Manual. Mesa de selección de racimos. Fermentación: con levaduras seleccionadas y temperatura controlada a 25 °C. Se realizan cuatro remontajes diarios y maceración de 20 días. Fue estacionado en tanques de acero inoxidable durante 10 meses.",
         "característica": " ",
-        "image": " "
+        "imagen": "id-8.jpg "
     },
     {
-        "id": "9",
+        "id": 9,
         "nombre": "EL ENEMIGO CHARDONNAY",
         "color": "blanco",
         "categoría": " ",
         "variedad": "Chardonnay",
-        "precio": " 1.100",
-        "descuento": "15 ",
+        "precio": 1100,
+        "descuento": 15,
         "descripcionCorta": "DeGualtallary. Provincia de Mendoza, Argentina. Fermentado en barricas de segundo y tercer uso. Trabajo sobre borras para otorgar cremosidad.",
         "crianza": "no",
         "descripcionLarga": "Fresco, con aporte del calcáreo y la tiza del suelo de Gualtallary, el resultado es un Chardonnay chispeante, aromático y notablemente aterciopelado en boca.",
-        "característica": " ",
-        "imagen": " "
+        "característica": "Recomendado",
+        "imagen": "id-9.jpg "
     },
     {
-        "id": "10",
+        "id": 10,
         "nombre": "DV CATENA CHARDONNAY CHARDONNAY",
         "color": "blanco",
         "categoría": " ",
         "variedad": "100 % Chardonay",
-        "precio": "896",
-        "descuento": "10 ",
+        "precio": 896,
+        "descuento": 10,
         "descripcionCorta": "DeDomingo, Villa Bastías, Tupungato; La Pirámide, Agrelo, Luján de Cuyo. Provincia de Mendoza, Argentina. Fermentación: En tanques de acero inoxidable levaduras seleccionadas, máx. temp. ferm. 22° C, durante 23 días, 50% con fermentación maloláctica.",
         "crianza": "Crianza sobre borras durante 6 meses en barriles de roble francés de 3 usos y en tanque de acero inoxidable, con removido de borras una vez por semana.",
-        "descripcionLarga":"D.V. Catena Chardonnay - Chardonnay refleja características propias de las zonas que le dan origen. Con días soleados y cálidos, y noches frescas, las uvas Chardonnay adquieren una madurez plena y bien balanceada.
-        Su color es amarillo oro con reflejos verdosos claros.
-        De gran complejidad y elegancia, en nariz se presenta concentrado e intenso: el viñedo La Pirámide aporta aromas de frutas tropicales maduras, ananá y durazno blanco. El viñedo Domingo confiere aromas cítricos y minerales.
-        En boca, de impacto dulce y untuoso, se perciben sabores a frutas maduras y una acidez vivaz que le brinda un fresco y prolongado final.",
-
+        "descripcionLarga": "D.V. Catena Chardonnay - Chardonnay refleja características propias de las zonas que le dan origen. Con días soleados y cálidos, y noches frescas, las uvas Chardonnay adquieren una madurez plena y bien balanceada. Su color es amarillo oro con reflejos verdosos claros. De gran complejidad y elegancia, en nariz se presenta concentrado e intenso: el viñedo La Pirámide aporta aromas de frutas tropicales maduras, ananá y durazno blanco. El viñedo Domingo confiere aromas cítricos y minerales. En boca, de impacto dulce y untuoso, se perciben sabores a frutas maduras y una acidez vivaz que le brinda un fresco y prolongado final.",
         "característica": " ",
-        "imagen": " "
+        "imagen": "id-10.jpg "
     },
     {
-        "id": "11",
+        "id": 11,
         "nombre": "SAINT FELICIEN CHARDONNAY ROBLE",
         "color": "blanco",
         "categoría": " ",
         "variedad": "Chardonnay",
-        "precio": "770",
-        "descuento": "10",
+        "precio": 770,
+        "descuento": 10,
         "descripcionCorta": "De Agrelo, Luján de Cuyo. Provincia de Mendoza, Argentina. Fermentación: En barricas de roble Francés con levaduras seleccionadas, max temp. ferm. 22° C, durante 23 días. 100% Fermentación Maloláctica. ",
         "crianza": "Crianza 12 meses en 100% roble Francés 70% nuevo y 30% usado de 2 y 3 usos. ",
-        "descripcionLarga":"Saint Felicien refleja características propias de la zona que le da origen. Con días soleados y cálidos, y noches frescas, las uvas de Chardonnay adquieren una madurez plena y bien balanceada.
-    Su color es amarillo intenso con reflejos verdosos claros.
-    De gran complejidad y elegancia, en nariz se presenta concentrado e intenso, con aromas de frutas tropicales maduras, peras, durazno blanco y vainilla.
-    En boca, de impacto dulce y untuoso , muy bien balanceado por la acidez, con sabores a frutas maduras y notas ligeras de vainilla y tostado, que le brindan un excelente y prolongado final. ",
-    "característica": " ",
-        "imagen": " "
+        "descripcionLarga": "Saint Felicien refleja características propias de la zona que le da origen. Con días soleados y cálidos, y noches frescas, las uvas de Chardonnay adquieren una madurez plena y bien balanceada. Su color es amarillo intenso con reflejos verdosos claros. De gran complejidad y elegancia, en nariz se presenta concentrado e intenso, con aromas de frutas tropicales maduras, peras, durazno blanco y vainilla. En boca, de impacto dulce y untuoso , muy bien balanceado por la acidez, con sabores a frutas maduras y notas ligeras de vainilla y tostado, que le brindan un excelente y prolongado final.",
+        "característica": " ",
+        "imagen": "id-11.jpg "
     },
     {
-        "id": "12",
+        "id": 12,
         "nombre": "LAGRIMILLA BLEND",
         "color": "blanco",
         "categoría": " ",
         "variedad": "Blend",
-        "precio": "264",
+        "precio": 264,
         "descripcionCorta": "Maceración fermentativa (tradicional) hasta 4 grados Beaumé. Descube. Fermentación lenta hasta rastros de azúcar. Trasiegos. Edulcoración y alcoholización. Estabilización (frío -4 grados, durante 72hs). 60% Moscatel de Alejandría | 40% Torrontés Riojano",
         "crianza": " ",
-        "descripcionLarga":"Color amarillo dorado brillante, con tonos ámbar, aroma avainillado, con matices de frutos secos como: pasas de uva, almendras y nueces, sobre un atractivo fondo dulce.
-
-     Apto para la santa misa. ",
-     "característica": " ",
-        "imagen": " "
+        "descripcionLarga": "Color amarillo dorado brillante, con tonos ámbar, aroma avainillado, con matices de frutos secos como: pasas de uva, almendras y nueces, sobre un atractivo fondo dulce. Apto para la santa misa.",
+        "característica": " ",
+        "imagen": "id-12.jpg "
     }
 ]
