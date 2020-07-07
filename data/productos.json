@@ -8,7 +8,7 @@
         "precio": 896,
         "descuento": 10,
         "descripcionCorta": "Cabernet Sauvignon: La Pirámide (Agrelo, Luján de Cuyo); Malbec: Angélica (Lunlunta, Maipú). Provincia de Mendoza, Argentina. 50% Cabernet Sauvignon | 50% Malbec",
-        "crianza": " null",
+        "crianza": " ",
         "descripcionLarga": "DV Catena Cabernet Sauvignon-Malbec es un vino elegante y complejo, de color rojo rubi con reflejos violetas. A la nariz, intenso y concentrado, presenta notas de especias aportadas por el Cabernet Sauvignon del viñedo La Pirámide, y notas de moras maduras y ciruelas, características del Malbec del viñedo Angélica, acompañadas por vainilla, tabaco y licor aportadas por la crianza en roble. En boca, de impacto dulce y gran complejidad, con taninos integrados y redondos, de final largo y persistente.",
         "característica": " ",
         "imagen": "id-1.jpg"
@@ -17,14 +17,14 @@
         "id": 2,
         "nombre": "EL ENEMIGO MALBEC",
         "color": "tinto",
-        "categoría": "null ",
+        "categoría": " ",
         "variedad": "Malbec",
         "precio": 1300,
         "descuento": 10,
         "descripcionCorta": " De Gualtallary. Provincia de Mendoza, Argentina. 89% Malbec | 11% Petit Verdot",
         "crianza": "14 meses de crianza en barricas de roble francés.",
         "descripcionLarga": "En vista un rojo rubí de alta intensidad y destellos violáceos. En nariz mucha madera. Tardó en abrirse en copa y luego del agite aparece fruta roja madura. En boca, un ataque brutal al paladar. Algo dulce y carnoso de muy buen equilibrio y acidez con taninos muy marcados.",
-        "característica": "null ",
+        "característica": " ",
         "imagen": "id-2.jpg "
     },
     {
@@ -120,7 +120,7 @@
         "precio": 1100,
         "descuento": 15,
         "descripcionCorta": "DeGualtallary. Provincia de Mendoza, Argentina. Fermentado en barricas de segundo y tercer uso. Trabajo sobre borras para otorgar cremosidad.",
-        "crianza": "no",
+        "crianza": " ",
         "descripcionLarga": "Fresco, con aporte del calcáreo y la tiza del suelo de Gualtallary, el resultado es un Chardonnay chispeante, aromático y notablemente aterciopelado en boca.",
         "característica": "Recomendado",
         "imagen": "id-9.jpg "
@@ -160,6 +160,7 @@
         "categoría": " ",
         "variedad": "Blend",
         "precio": 264,
+        "decuento":5,
         "descripcionCorta": "Maceración fermentativa (tradicional) hasta 4 grados Beaumé. Descube. Fermentación lenta hasta rastros de azúcar. Trasiegos. Edulcoración y alcoholización. Estabilización (frío -4 grados, durante 72hs). 60% Moscatel de Alejandría | 40% Torrontés Riojano",
         "crianza": " ",
         "descripcionLarga": "Color amarillo dorado brillante, con tonos ámbar, aroma avainillado, con matices de frutos secos como: pasas de uva, almendras y nueces, sobre un atractivo fondo dulce. Apto para la santa misa.",
