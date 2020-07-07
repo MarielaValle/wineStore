@@ -12,8 +12,8 @@ let productsController={
     raiz: (req, res) => {
 		
 		res.render("products",{products});
-	}
-   /* detail:(req,res) => {
+	},
+    detail:(req,res) => {
            
 		   let id = req.params.id 
 		   products.forEach(function(product){
@@ -26,7 +26,7 @@ let productsController={
 			
 		   res.render('detail',{producto}); 
 	},
-	*/
+	
 
 };
 
