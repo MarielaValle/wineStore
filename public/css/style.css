@@ -10,6 +10,7 @@ a {
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ 
 
 }
 /* Colores */
@@ -150,82 +151,55 @@ body {
 
 
 /* ## Detail ## */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.products-title{
+  color:#0C0910;
+  text-emphasis: bold;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align:center;
+  border-bottom: solid;
+  border-color:#712B42;
+  border-width: 5px;
+  
+  
+  
+  
+  
+}
+
+#filasP{
+  justify-content: center;
+  background-image: url(/images/banner2.jpg);
+  background-size: cover;
+}
+
+.product-box{
+  margin-top: 50px;
+  border: solid;
+  border-color: #712B42;
+  border-radius: 5px;
+  height: 100vh;
+  padding: 25px;
+  margin-bottom: 50px;
+  background-color: white;
+  
+}
+
+.product-box_image{
+
+  position:relative;
+  right:10px;
+}
+
+.productImage{
+  width: 90%;
+}
+@media (max-width:575px){
+  .productImage{
+    width: 50%;
+  }
+
+}
 
 
 
