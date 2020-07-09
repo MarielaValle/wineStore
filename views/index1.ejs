@@ -122,3 +122,14 @@
 <% } %> <% } %>
 <!-- Incluye Footer -->
 <%- include('./partials/footer.ejs') %>
+
+
+<% if(data.Formulario == 'EdicionProducto'){ %>
+  <%- include('./formProducto/modificaProducto.ejs') %>
+<% } %>
+
+
+
+<% if(data.Formulario == 'DetalleProducto'){ %>
+<%- include('./formProducto/detalleProducto.ejs') %>
+<% } %>

@@ -27,7 +27,14 @@ let productsController={
 		   res.render('detail',{producto}); 
 	},
 	
-
+   
+	formAlta:(req, res) => {
+		let data = {
+		  Formulario: 'NuevoProducto',
+		};
+		res.render('formProducto',{data:data});
+	  
+	}
 };
 
 module.exports = productsController;    
