@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const db = require('/database/models/index');
+
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -18,8 +20,17 @@ let productsController = {
 
 	raiz: (req, res) => {
 
-		res.render("products", { products });
-	},
+			db.sequelize.query('SELECT * FROM productos')
+		
+			  .then(function(resultados){
+		 
+					let products = resultados[0];
+					
+			  });
+			  res.render('products',{products})
+			},
+
+	
 	detail: (req, res) => {
 
 		let id = req.params.id
