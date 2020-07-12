@@ -180,15 +180,15 @@ body {
   
 }
 
-#colorF {
+/*#colorF {
   background-color:  #6567;
 }
-
+*/
 .product-box{
   margin-top: 50px;
-  border: solid;
+ /* border: solid;
   border-color: #712B42;
-  border-radius: 5px;
+  border-radius: 5px;*/
   height: 100vh;
   padding: 25px;
   margin-bottom: 50px;
@@ -230,7 +230,7 @@ body {
    border:solid;
    border-color:  #712B42;
    border-radius: 5px;
-   background-color: #DAC9C1;
+  /* background-color: #DAC9C1;*/
    text-align: center;
    
  
@@ -267,9 +267,9 @@ width: 80%;
 
 
 
-      #registroC{
+     /* #registroC{
           background-color:#6567;
-      }
+      }*/
 
  @media(max-width:768px){
   

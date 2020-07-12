@@ -1,6 +1,74 @@
-<% if(data.Formulario == 'nuevoProducto'){ %>
-  
-    <%- include("forms/nuevoProducto")%>
-    
-    <% } %>
-    
+<div class='container-fluid' id='registroC'>
+  <div class='row' id='form'>
+    <div class="sm-col-4 md-col-12 lg-col-8" id="registro">
+
+
+
+      <h3 #>Edición de productos</h3>
+
+
+      <p>Por favor realice las modificaciones que necesite </p>
+
+
+
+      <form action='/products/edit/<%= product.id %>?_method=PUT' method='POST' enctype='multipart/form-data'>
+
+        <p><label for='id'>ID</label></p>
+        <p> <input type='number' name='id' id='id' class='uno' value="<%= product.id %>"></p>
+
+        <p><label for='nombre'>Nombre</label></p>
+        <p> <input type='text' name='nombre' id='nombre' class='uno' value="<%=product.nombre%>"></p>
+
+        <p><label for='color'>Color</label></p>
+        <p> <input type='text' name='color' id='color' class='uno' value="<%=product.color%>"></p>
+
+        <p><label for='categoría'>Categoría</label></p>
+        <p> <input type='text' name='categoría' id='categoría' class='uno' value="<%=product.categoría%>"></p>
+
+        <p><label for='variedad'>Variedad</label></p>
+        <p> <input type='text' name='variedad' id='variedad' class='uno' value="<%=product.variedad%>"></p>
+
+        <p><label for='precio'>Precio</label></p>
+        <p><input type='number' name='precio' id='precio' class='uno' value="<%= product.precio %>" </p>
+
+        <p><label for='descuento'>Descuento</label></p>
+        <p><input type='number' name='descuento' id='descuento' class='uno' value='<%= product.descuento %>'></p>
+
+        <p><label for='cantidad'>cantidad</label></p>
+        <p><input type='number' name='cantidad' id='cantidad' class='uno' value="<%= product.cantidad%>"></p>
+
+        <p><label for='descripcionCorta'>Descripción Corta</label></p>
+        <p><textarea name='descripcionCorta' id='descripcionCorta' style='background-color: white;' class='uno'
+            value=""><%= product.descripcionCorta%></textarea></p>
+
+
+
+        <p><label for='crianza'>crianza</label></p>
+        <p><textarea name='crianza' id='crianza' style='background-color: white;' class='uno'
+            value=""><%= product.crianza %></textarea></p>
+
+        <p><label for='descripcionLarga'>Descripción Larga</label></p>
+        <p><textarea name='descripcionLarga' id='descripcionLarga' style='background-color: white;'
+            class='uno'><%= product.descripcionLarga%></textarea></p>
+
+
+
+        <p><label for='imagen'>Foto de producto a modificar</label></p>
+
+        <img class="" src="/images/productos/<%=product.imagen %>" style='width:30%' />
+
+        <br>
+        <%=product.imagen%>
+        <br>
+
+        <p class='avatar'><input type='file' name='imagen' id='imagen' class='uno' value='<%=product.imagen%>'></p>
+
+        <button type="submit" class="btn btn-primary" id="btn-form">Modificar</button>
+
+
+      </form>
+
+
+    </div>
+  </div>
+</div>

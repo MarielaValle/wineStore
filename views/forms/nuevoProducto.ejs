@@ -1,62 +1,65 @@
-
-
-
-
-
-<div class='container-fluid' id='registroC' >
+<div class='container-fluid' id='registroC'>
     <div class='row' id='form'>
         <div class="sm-col-4 md-col-12 lg-col-8" id="registro">
-            
+
+
+
             <h3>Alta de productos</h3>
-            
+           
+
             <p>Por favor llene los campos indicados </p>
+
             
-            
-            <form action='#'method='post' >
-                
-                <p><label for='ID'>ID Producto</label></p>
-                <p><input type='number' name='numero' id='ID'   class='uno'></p>
-                
-                
-                <p><label for='descripcion'>Descripción de producto</label></p>
-                <p><textarea name='descripcionProducto' id='descripcion'  style='background-color: white;' class='uno'></textarea></p>
-                
-                <p><label for='cantidad'>Cantidad</label></p>
-                <p><input type='number' name='cantidad' id='cantidad'   class='uno'></p>
-                
-                
+
+            <form action='/products/create' method='POST' enctype='multipart/form-data'>
+
+
+
+                <p><label for='nombre'>Nombre</label></p>
+                <p> <input type='text' name='nombre' id='nombre' class='uno'></p>
+
+                <p><label for='color'>Color</label></p>
+                <p> <input type='text' name='color' id='color' class='uno'></p>
+
+                <p><label for='categoría'>Categoría</label></p>
+                <p> <input type='text' name='categoría' id='categoría' class='uno'></p>
+
+                <p><label for='variedad'>Variedad</label></p>
+                <p> <input type='text' name='variedad' id='variedad' class='uno'></p>
+
                 <p><label for='precio'>Precio</label></p>
-                <p> <input type='number' name='contraseña' id='precio' class='uno'></p> 
-                
-                <p><label for='foto'>Foto de producto</label></p>
-                <p class='avatar'><input type='file' name='foto' id='foto'class='uno' ></p>
-                
-                <button type="button" class="btn btn-primary" id="btn-form">Enviar</button>
-                
-                
+                <p><input type='number' name='precio' id='precio' class='uno'></p>
+
+                <p><label for='descuento'>Descuento</label></p>
+                <p><input type='number' name='descuento' id='descuento' class='uno'></p>
+
+                <p><label for='cantidad'>cantidad</label></p>
+                <p><input type='number' name='cantidad' id='cantidad' class='uno'></p>
+
+                <p><label for='descripcionCorta'>Descripción Corta</label></p>
+                <p><textarea name='descripcionCorta' id='descripcionCorta' style='background-color: white;'
+                        class='uno'></textarea></p>
+
+
+
+                <p><label for='crianza'>crianza</label></p>
+                <p><textarea name='crianza' id='crianza' style='background-color: white;' class='uno'></textarea></p>
+
+                <p><label for='descripcionLarga'>Descripción Larga</label></p>
+                <p><textarea name='descripcionLarga' id='descripcionLarga' style='background-color: white;'
+                        class='uno'></textarea></p>
+
+
+
+                <p><label for='imagen'>Foto de producto</label></p>
+                <p class='avatar'><input type='file' name='imagen' id='imagen' class='uno'></p>
+
+                <button type="submit" class="btn btn-primary" id="btn-form">Guardar</button>
+
+
             </form>
-            
-            
+
+
         </div>
-    </div> 
+    </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

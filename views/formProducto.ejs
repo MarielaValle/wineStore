@@ -1,16 +1,28 @@
 
 <%- include("partials/head")%>
 <%- include("partials/header")%>
-<!------------------------------------------------------------>
+<!--------------------Agregar Producto---------------------------------------->
+<% if(data.Formulario == 'NuevoProducto'){ %>
 
-<!------------------------------------------------------------>
-
-  <% if(data.Formulario == 'NuevoProducto'){ %>
-  
   <%- include("./forms/nuevoProducto")%>
   
   <% } %>
   
+<!-----------------------Editar Producto------------------------------------->
+
+   <% if(data.Formulario == 'ModificarProducto'){ %>
+
+  <%- include("./forms/modificarProducto")%>
+  
+  <% } %>
+
+  <!-----------------------Eliminar Producto------------------------------------->
+
+  <% if(data.Formulario == 'DeleteProducto'){ %>
+
+    <%- include("./forms/deleteProducto")%>
+    
+    <% } %>
   
   <!------------------------------------------------------------>
   <%- include("partials/footer")%>
