@@ -1,9 +1,16 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
   <a class="navbar-brand" href="index.ejs">
-    <img src="/img/logo.png" width="150" height="130" alt="logo" />
+    <img src="../img/logo.png" width="150" height="130" alt="logo" />
   </a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-    data-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler navbar-toggler-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarToggler01"
+    aria-controls="navbarToggler01"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarToggler01">
@@ -13,28 +20,31 @@
     </div>
 
     <div class="navbar-nav text-center">
-
-      <a class="nav-item nav-link" href="/users/login">Ingresar</a>
-      <a class="nav-item nav-link" href="/users/carrito">
+     
+       
+      <a class="nav-item nav-link" href="/users/profile">Perfil</a>
+      <a class="nav-item nav-link" href="#">
         <i class="fa fa-shopping-cart fa-1x"></i>
       </a>
+      <a class="nav-item nav-link" href="/users/logout">Salir</a>
 
+
+      <a class="nav-item nav-link" href="/users/login">Ingresar</a>
       <a class="nav-item nav-link" href="/users/register">Registrarse</a>
-      <a class="nav-item nav-link" href="#">Salir</a>
-
+      
     </div>
   </div>
-  <form class="form-inline form-buscar mr-sm-12 mr-md-12 mr-lg-12" action="/search" method="GET">
-    <input class="form-control inp-buscar" type="text" name ="keywords" placeholder="Buscar" />
+
+  <form class="form-inline form-buscar mr-sm-12 mr-md-12 mr-lg-12" action="">
+    <input class="form-control inp-buscar" type="text" placeholder="Buscar" />
     <button class="btn btn-success btn-buscar" type="submit">
       <i class="fa fa-search" aria-hidden="true"></i>
     </button>
   </form>
-  
-  
 </nav>
 
 
+<!-------------------------Carrousel------------------------------>
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -65,3 +75,5 @@
     </a>
   </div>
 </div>
+
+<!-------------------Fin Carrousel---------------------------------------------->

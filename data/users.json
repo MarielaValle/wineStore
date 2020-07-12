@@ -1,0 +1,21 @@
+[
+ {
+  "Nombre": "Cliente",
+  "Apellido": "Cliente",
+  "Email": "cliente@gmail.com",
+  "Contrasenia": "$2b$10$EE8XJv7xMRKB1RkLWHMsTu5ROHO6g1it4hOGpV2d9UyASiD7s1Bei",
+  "Categoria": "Cliente",
+  "Imagen": "avatar-1593723870541",
+  "id": 2
+ },
+ {
+  "Nombre": "Admin",
+  "Apellido": "Admin",
+  "Email": "admin@gmail.com",
+  "Contrasenia": "$2b$10$XbE7gIRvGoAZRSlk9qOet.8dlli5BHbq/kETv4VqAseUvVsp4j8jK",
+  "Categoria": "Admin",
+  "Imagen": "avatar-1593723705818",
+  "id": 1
+ }
+ 
+]
