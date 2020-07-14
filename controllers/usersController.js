@@ -25,8 +25,7 @@ let validacionUsuario = (req, res) => {
       Imagen: usuarioExistente.Imagen,
     };
 
-    user = req.session.user
-    
+    req.session.user = user;
     res.cookie('userCookie', user.id, { maxAge: 70000 * 120 })
     res.redirect("/users/profile");
 
@@ -89,10 +88,11 @@ let registrandoUsuario = (req, res) => {
     */
   
   let detalleUsuario = (req, res) => {
-    console.log(req.session.user);
+    
     if (req.session.user) {
       let { Email } = req.session.user;
       let usuarioExiste = modelUsers.Consulta(Email);
+      console.log(usuarioExiste);
       if (usuarioExiste != null) {
         let data = {
           Formulario: "MisDatos",

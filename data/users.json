@@ -5,7 +5,7 @@
   "Email": "cliente@gmail.com",
   "Contrasenia": "$2b$10$EE8XJv7xMRKB1RkLWHMsTu5ROHO6g1it4hOGpV2d9UyASiD7s1Bei",
   "Categoria": "Cliente",
-  "Imagen": "avatar-1593723870541",
+  "Imagen": "avatar-1594586677825.jpg",
   "id": 2
  },
  {
@@ -14,8 +14,16 @@
   "Email": "admin@gmail.com",
   "Contrasenia": "$2b$10$XbE7gIRvGoAZRSlk9qOet.8dlli5BHbq/kETv4VqAseUvVsp4j8jK",
   "Categoria": "Admin",
-  "Imagen": "avatar-1593723705818",
+  "Imagen": "avatar-1594577608797.jpg",
   "id": 1
+ },
+ {
+  "Nombre": "pato",
+  "Apellido": "pato",
+  "Email": "pato@gmail.com",
+  "Contrasenia": "$2b$10$tGUFVyoiWD67oQodXsoOCu4cHTQCYdqU1S0caou4dwwNgIzTKCQ7u",
+  "Categoria": "cliente",
+  "Imagen": "avatar-1594639582605.png",
+  "id": 3
  }
- 
 ]

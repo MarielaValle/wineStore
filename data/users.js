@@ -6,8 +6,8 @@ function readJSONfile() {
   let archivo = fs.readFileSync(
     path.join(__dirname, "..") + "/data/users.json"
   );
-  let usuarioss = JSON.parse(archivo);
-  return usuarioss;
+  let usuarios = JSON.parse(archivo);
+  return usuarios;
 }
 // Guarda el json de usuarios
 function saveJSONfile(objetos) {

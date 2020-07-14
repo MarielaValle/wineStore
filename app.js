@@ -1,8 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+
 var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+
 var methodOverride = require('method-override');
 var session = require('express-session')
 
@@ -22,7 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-app.use(session({ secret: 'secreto' }));
+app.use(session( { secret: 'grupo4', resave: true, saveUninitialized: true}));
+//app.use(session({ secret: 'secreto' }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

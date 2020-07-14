@@ -91,7 +91,8 @@
             <h3 class="pb-3">Mi Informacion</h3>
             <form action="<%= data.User.id+'/edit' %>" method="POST" enctype="multipart/form-data">
               <div class="form-group">
-                <img src="<%= '/img/avatar/'+data.User.Imagen %>">
+                
+                <img src="/img/avatar/<%= data.User.Imagen%>" style='width:30%' alt='imagen de perfil'>
                 <div class="input-group justify-content-center align-items-center">
                   <label class="input-group-btn">
                     <span class="btn btn-secondary btn-file">
