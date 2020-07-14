@@ -1,14 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const db = path.join(__dirname, "..") + "/database/models/index.js"
+//const { Sequelize } = require('sequelize');
+//const db = path.join(__dirname, "..") + "/database/models/index.js"
 
 //hace caer la aplicación, no logra requerir sequelize
-//const db = require('../database/models/index.js');
 
+var db = require('../database/models/index.js');
 //ar model = require(path.join(__dirname, ('../database/models/index')))(sequelize, Sequelize.DataTypes);
 
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/productos.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 saveProducts = function () {
 	

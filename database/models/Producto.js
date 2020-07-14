@@ -43,8 +43,9 @@ module.exports = (sequelize, dataTypes) =>{
            cantidad: {
               type:dataTypes.INTEGER
             },
-          descripcionCorta: {
-              Type:dataTypes.STRING(300)
+
+            descripcionCorta: {
+              type:dataTypes.STRING(300)
           },
   
            crianza: {
@@ -60,7 +61,7 @@ module.exports = (sequelize, dataTypes) =>{
               type:dataTypes.STRING(45)
   
              },
-          imagen: {
+           imagen: {
               type:dataTypes.STRING(100)
   
             },

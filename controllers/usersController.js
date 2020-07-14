@@ -7,7 +7,7 @@ let formularioIngreso = (req, res) => {
   let data = {
     Formulario: "UsuarioRegistrado",
     User: 'null'
-   
+
   };
   res.render("usuarios", { data: data });
 };
@@ -15,7 +15,7 @@ let formularioIngreso = (req, res) => {
 let validacionUsuario = (req, res) => {
   let { email, contrasenia } = req.body; // se toman los datos del formulario
   let usuarioExistente = modelUsers.Consulta(email);
-  if (usuarioExistente != null && (bcrypt.compareSync(contrasenia, usuarioExistente.Contrasenia))){
+  if (usuarioExistente != null && (bcrypt.compareSync(contrasenia, usuarioExistente.Contrasenia))) {
     let user = {
       id: usuarioExistente.id,
       Nombre: usuarioExistente.Nombre,
@@ -26,16 +26,21 @@ let validacionUsuario = (req, res) => {
     };
 
     req.session.user = user;
-    res.cookie('userCookie', user.id, { maxAge: 70000 * 120 })
+
+    let usuarioLogueado = null;
+    usuarioLogueado = req.session.user;
+
+    console.log(req.session.user)
+    res.cookie('userCookie', usuarioLogueado.id, { maxAge: 70000 * 120 })
     res.redirect("/users/profile");
 
-  } else { 
-    
-    
-    let data = { Formulario:"UsuarioRegistrado"  };
-    res.render("usuarios",{data:data,errores:[{msg:'Credenciales inválidas'}]});
+  } else {
+
+
+    let data = { Formulario: "UsuarioRegistrado" };
+    res.render("usuarios", { data: data, errores: [{ msg: 'Credenciales inválidas' }] });
   }
- 
+
 };
 // funcion para devolver el formulario de registro de nuevo usuario
 let formularioRegistro = (req, res) => {
@@ -58,19 +63,19 @@ let registrandoUsuario = (req, res) => {
       contrasenia2,
       categoria,
     } = req.body;
-    
+
 
     let imagen = req.file.filename; // se toma el nombre del archivo
     if (contrasenia == contrasenia2) {
-      
+
       contrasenia = bcrypt.hashSync(contrasenia, 10);
 
       modelUsers.Alta(nombre, apellido, email, contrasenia, categoria, imagen);
       res.redirect("/users/login");
     } else {
 
-       let data = { Formulario: 'FormularioRegistro' };
-       res.render("usuarios",{data:data,errores:[{msg:'Las contraseñas no coinciden'}]});
+      let data = { Formulario: 'FormularioRegistro' };
+      res.render("usuarios", { data: data, errores: [{ msg: 'Las contraseñas no coinciden' }] });
     }
 
 
@@ -81,52 +86,52 @@ let registrandoUsuario = (req, res) => {
     res.render("usuarios", { data: data, errores: errores.errors });
   }
 };
-  //
-  /*let formularioEdicion = (req, res) => {
-    res.render("index", { title: "Formulario de Edicion" });
-    // momentaneamente sin utilizar.
-    */
-  
-  let detalleUsuario = (req, res) => {
-    
-    if (req.session.user) {
-      let { Email } = req.session.user;
-      let usuarioExiste = modelUsers.Consulta(Email);
-      console.log(usuarioExiste);
-      if (usuarioExiste != null) {
-        let data = {
-          Formulario: "MisDatos",
-          User: usuarioExiste,
-        };
-        res.render("usuarios", { data: data });
-      } else {
-        res.redirect("/users/login");
-      }
+//
+/*let formularioEdicion = (req, res) => {
+  res.render("index", { title: "Formulario de Edicion" });
+  // momentaneamente sin utilizar.
+  */
+
+let detalleUsuario = (req, res) => {
+
+  if (req.session.user) {
+    let { Email } = req.session.user;
+    let usuarioExiste = modelUsers.Consulta(Email);
+    // console.log(usuarioExiste);
+    if (usuarioExiste != null) {
+      let data = {
+        Formulario: "MisDatos",
+        User: usuarioExiste,
+      };
+      res.render("usuarios", { data: data });
     } else {
       res.redirect("/users/login");
     }
-  };
-  let logout = (req, res) => {
-
-    req.session.destroy();
-    res.cookie('userCookie', null, { maxAge: 1 });
-    
-   
-    res.redirect('/')
+  } else {
+    res.redirect("/users/login");
   }
+};
+let logout = (req, res) => {
 
-  // funcion borrador hasta que se completa cada controlador.
-  function prueba(res, req) {
-    res.send("corriendo");
-  }
-     
-  module.exports = {
-    FormIngreso: formularioIngreso,
-    Ingreso: validacionUsuario,
-    FormRegistro: formularioRegistro,
-    Registrando: registrandoUsuario,
-    FormEdicion: prueba,
-    Editando: prueba,
-    Detalle: detalleUsuario,
-    Salir: logout
-  };
+  req.session.destroy();
+  res.cookie('userCookie', null, { maxAge: 1 });
+
+
+  res.redirect('/')
+}
+
+// funcion borrador hasta que se completa cada controlador.
+function prueba(res, req) {
+  res.send("corriendo");
+}
+
+module.exports = {
+  FormIngreso: formularioIngreso,
+  Ingreso: validacionUsuario,
+  FormRegistro: formularioRegistro,
+  Registrando: registrandoUsuario,
+  FormEdicion: prueba,
+  Editando: prueba,
+  Detalle: detalleUsuario,
+  Salir: logout
+};
