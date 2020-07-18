@@ -1,20 +1,16 @@
 const fs = require('fs');
 const path = require('path');
-//const { Sequelize } = require('sequelize');
-//const db = path.join(__dirname, "..") + "/database/models/index.js"
 
-//hace caer la aplicación, no logra requerir sequelize
+//var db = require('../database/models/index.js');
 
-var db = require('../database/models/index.js');
-//ar model = require(path.join(__dirname, ('../database/models/index')))(sequelize, Sequelize.DataTypes);
 
-//const productsFilePath = path.join(__dirname, '../data/productos.json');
-//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/productos.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 saveProducts = function () {
 	
 	let productsJson = JSON.stringify(products);
-	fs.writeFileSync('productsFilePath', productsJson)// lo pongo entre comillas porque ahora no quiero que lo guarde en data porque me lo desordena
+	fs.writeFileSync(productsFilePath, productsJson)// lo pongo entre comillas porque ahora no quiero que lo guarde en data porque me lo desordena
 
 }
 
@@ -24,12 +20,12 @@ saveProducts = function () {
 let productsController = {
 
 	// con json	 
-	/*aiz: (req, res) => {
+	raiz: (req, res) => {
 
 		res.render("products", { products });
-	},	*/	
+	},		
             //con sequelize
-	        raiz: (req, res) => {
+	    /*    raiz: (req, res) => {
 
 			db.sequelize.query('SELECT * FROM productos')
 		
@@ -41,7 +37,7 @@ let productsController = {
 			  res.render('products',{products})
 			},
               
-		
+		*/
 
 	
 	detail: (req, res) => {
@@ -96,7 +92,8 @@ let productsController = {
 // Update - Form to edit
 edit: (req, res) => {
 	// Do the magic
-	const productToEdit = products.find(item => item.id == req.params.productId);
+	
+	let productToEdit = products.find(item => item.id == req.params.productId);
     product=productToEdit;
 	let data = {
 		Formulario: 'ModificarProducto',
@@ -156,16 +153,14 @@ delete: (req, res) => {
 // Delete - Delete one product from DB
 destroy : (req, res) => {
 	// Do the magic
-	let productsNew;
-	productsNew=products.filter(function (product){
 
-		product.id != req.params.productId
-		
-	});
-
-	products=productsNew;
-	 saveProducts(products);
+	let productsNew = products.filter(product=>product.id != req.params.productId)
 	
+
+	products=productsNew
+      
+	saveProducts(products);
+
 	res.send("Eliminado!");
 }
 
