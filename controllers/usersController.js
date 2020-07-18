@@ -13,25 +13,25 @@ let formularioIngreso = (req, res) => {
 };
 // funcion para la validacion de ususario registrado
 let validacionUsuario = (req, res) => {
+  let user=null;
   let { email, contrasenia } = req.body; // se toman los datos del formulario
   let usuarioExistente = modelUsers.Consulta(email);
   if (usuarioExistente != null && (bcrypt.compareSync(contrasenia, usuarioExistente.Contrasenia))) {
-    let user = {
+     user = {
       id: usuarioExistente.id,
       Nombre: usuarioExistente.Nombre,
       Apellido: usuarioExistente.Apellido,
       Email: usuarioExistente.Email,
       Categoria: usuarioExistente.Categoria,
       Imagen: usuarioExistente.Imagen,
+     
     };
 
     req.session.user = user;
-
-    let usuarioLogueado = null;
-    usuarioLogueado = req.session.user;
+    //let usuarioLogueado=req.session.user
 
     console.log(req.session.user)
-    res.cookie('userCookie', usuarioLogueado.id, { maxAge: 70000 * 120 })
+    res.cookie('userCookie', user.id, { maxAge: 70000 * 120 })
     res.redirect("/users/profile");
 
   } else {
