@@ -1,59 +1,72 @@
 var modelUsers = require("../data/users.js");
+
+
 const { check, validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
 
-// funcion para devolver el formulario de ingreso de usuario ya registrado
-let formularioIngreso = (req, res) => {
-  let data = {
-    Formulario: "UsuarioRegistrado",
-    User: 'null'
 
-  };
-  res.render("usuarios", { data: data });
-};
-// funcion para la validacion de ususario registrado
-let validacionUsuario = (req, res) => {
-  let { email, contrasenia } = req.body; // se toman los datos del formulario
-  let usuarioExistente = modelUsers.Consulta(email);
-  if (usuarioExistente != null && (bcrypt.compareSync(contrasenia, usuarioExistente.Contrasenia))) {
-    let user = {
-      id: usuarioExistente.id,
-      Nombre: usuarioExistente.Nombre,
-      Apellido: usuarioExistente.Apellido,
-      Email: usuarioExistente.Email,
-      Categoria: usuarioExistente.Categoria,
-      Imagen: usuarioExistente.Imagen,
+let usersController = {
+  
+
+  loginForm: (req, res) => {
+    let data = {
+      Formulario: "UsuarioRegistrado",
+      User: 'null'
+
     };
+    res.render("usuarios", { data: data });
 
-    req.session.user = user;
-
-    let usuarioLogueado = null;
-    usuarioLogueado = req.session.user;
-
-    console.log(req.session.user)
-    res.cookie('userCookie', usuarioLogueado.id, { maxAge: 70000 * 120 })
-    res.redirect("/users/profile");
-
-  } else {
+  },
 
 
-    let data = { Formulario: "UsuarioRegistrado" };
-    res.render("usuarios", { data: data, errores: [{ msg: 'Credenciales inválidas' }] });
-  }
+  login: (req, res) => {
+     
+     let { email, contrasenia } = req.body; // se toman los datos del formulario
+     let usuarioExistente = modelUsers.Consulta(email);
+     if (usuarioExistente != null && (bcrypt.compareSync(contrasenia, usuarioExistente.Contrasenia))) {
+       user = {
+        id: usuarioExistente.id,
+        Nombre: usuarioExistente.Nombre,
+        Apellido: usuarioExistente.Apellido,
+        Email: usuarioExistente.Email,
+        Categoria: usuarioExistente.Categoria,
+        Imagen: usuarioExistente.Imagen,
+      };
+ 
+       req.session.user = user;
+      
+       res.cookie('userCookie', user.id, { maxAge: 70000 * 120 })
+       res.redirect("/users/profile");
+ 
+     }  else{
 
+
+      let data = { Formulario: "UsuarioRegistrado" };
+
+      res.render("usuarios", { data: data, errores: [{ msg: 'Credenciales inválidas' }] });
+
+
+    }
+  
+},
+
+
+  registroForm: (req, res) => {
+    let data = {
+  Formulario: "FormularioRegistro",
 };
-// funcion para devolver el formulario de registro de nuevo usuario
-let formularioRegistro = (req, res) => {
-  let data = {
-    Formulario: "FormularioRegistro",
-  };
-  res.render("usuarios", { data: data });
-};
+
+res.render("usuarios", { data: data });
+
+
+  },
+
 // funcion para realizar el registro de nuevo ususario
-let registrandoUsuario = (req, res) => {
+registrarse: (req, res) => {
 
   let errores = validationResult(req);
   if (errores.isEmpty()) {
+
 
     let {
       nombre,
@@ -85,53 +98,53 @@ let registrandoUsuario = (req, res) => {
 
     res.render("usuarios", { data: data, errores: errores.errors });
   }
-};
-//
-/*let formularioEdicion = (req, res) => {
-  res.render("index", { title: "Formulario de Edicion" });
-  // momentaneamente sin utilizar.
-  */
+},
+  //
+  /*let formularioEdicion = (req, res) => {
+    res.render("index", { title: "Formulario de Edicion" });
+    // momentaneamente sin utilizar.
+    */
 
-let detalleUsuario = (req, res) => {
+  profile: (req, res) => {
 
-  if (req.session.user) {
-    let { Email } = req.session.user;
-    let usuarioExiste = modelUsers.Consulta(Email);
-    // console.log(usuarioExiste);
-    if (usuarioExiste != null) {
-      let data = {
-        Formulario: "MisDatos",
-        User: usuarioExiste,
-      };
-      res.render("usuarios", { data: data });
+    if (req.session.user) {
+      let { Email } = req.session.user;
+      let usuarioExiste = modelUsers.Consulta(Email);
+      // console.log(usuarioExiste);
+      if (usuarioExiste != null) {
+        let data = {
+          Formulario: "MisDatos",
+          User: usuarioExiste,
+        };
+        res.render("usuarios", { data: data });
+      } else {
+        res.redirect("/users/login");
+      }
     } else {
       res.redirect("/users/login");
     }
-  } else {
-    res.redirect("/users/login");
-  }
+  },
+
+
+    logout: (req, res) => {
+        
+        req.session.user = undefined;
+        
+
+        let data = { 
+          Formulario: "UsuarioRegistrado" ,
+          mensaje:'Se cerró la sesión exitosamente'
+        }
+        res.render("usuarios", { data:data });
+    
+     
+    },
+
+  // funcion borrador hasta que se completa cada controlador.
+  /*function prueba(res, req) {
+    res.send("corriendo");
+  }*/
+
 };
-let logout = (req, res) => {
 
-  req.session.destroy();
-  res.cookie('userCookie', null, { maxAge: 1 });
-
-
-  res.redirect('/')
-}
-
-// funcion borrador hasta que se completa cada controlador.
-function prueba(res, req) {
-  res.send("corriendo");
-}
-
-module.exports = {
-  FormIngreso: formularioIngreso,
-  Ingreso: validacionUsuario,
-  FormRegistro: formularioRegistro,
-  Registrando: registrandoUsuario,
-  FormEdicion: prueba,
-  Editando: prueba,
-  Detalle: detalleUsuario,
-  Salir: logout
-};
+module.exports = usersController;    
