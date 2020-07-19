@@ -1,5 +1,14 @@
 [
  {
+  "Nombre": "caro",
+  "Apellido": "caro",
+  "Email": "caro@gmail.com",
+  "Contrasenia": "$2b$10$9RV1bJPdhhWBmxuJFc3V2e/zZsYcb4in.X1DPjOyQlchsmT.8vO7K",
+  "Categoria": "cliente",
+  "Imagen": "avatar-1595161238338.jpg",
+  "id": 6
+ },
+ {
   "Nombre": "pato",
   "Apellido": "pato",
   "Email": "pato@gmail.com",
@@ -18,12 +27,12 @@
   "id": 4
  },
  {
-  "Nombre": "caro",
-  "Apellido": "caro",
-  "Email": "caro@gmail.com",
-  "Contrasenia": "$2b$10$9RV1bJPdhhWBmxuJFc3V2e/zZsYcb4in.X1DPjOyQlchsmT.8vO7K",
+  "Nombre": "mari",
+  "Apellido": "mari",
+  "Email": "mari@gmail.com",
+  "Contrasenia": "$2b$10$e07G8aP5VyIAKh2tLTmXhOrPh07dL4oLKQgfaW3RU1cIlKRlKYSOK",
   "Categoria": "cliente",
-  "Imagen": "avatar-1595161238338.jpg",
-  "id": 6
+  "Imagen": "avatar3.png",
+  "id": 7
  }
 ]

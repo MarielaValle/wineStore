@@ -78,7 +78,16 @@ registrarse: (req, res) => {
     } = req.body;
 
 
-    let imagen = req.file.filename; // se toma el nombre del archivo
+
+    let imagen;
+    if (typeof req.file === 'undefined') {
+      imagen = 'avatar3.png';
+    } else {
+      imagen = req.file.filename; // se toma el nombre del archivo
+    }
+
+
+
     if (contrasenia == contrasenia2) {
       
       contrasenia = bcrypt.hashSync(contrasenia, 10);
@@ -113,18 +122,14 @@ registrarse: (req, res) => {
       res.render("usuarios", { data: data, errores: errores.errors });
   }
 },
-  //
-  /*let formularioEdicion = (req, res) => {
-    res.render("index", { title: "Formulario de Edicion" });
-    // momentaneamente sin utilizar.
-    */
+ 
 
   profile: (req, res) => {
 
     if (req.session.user) {
       let { Email } = req.session.user;
       let usuarioExiste = modelUsers.Consulta(Email);
-      // console.log(usuarioExiste);
+      
       if (usuarioExiste != null) {
         let data = {
           Formulario: "MisDatos",
