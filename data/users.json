@@ -1,38 +1,20 @@
 [
  {
-  "Nombre": "pato",
-  "Apellido": "pato",
-  "Email": "pato@gmail.com",
-  "Contrasenia": "$2b$10$tGUFVyoiWD67oQodXsoOCu4cHTQCYdqU1S0caou4dwwNgIzTKCQ7u",
-  "Categoria": "cliente",
-  "Imagen": "avatar-1594639582605.png",
-  "id": 3
- },
- {
-  "Nombre": "Cliente",
-  "Apellido": "Cliente",
+  "Nombre": "cliente",
+  "Apellido": "cliente",
   "Email": "cliente@gmail.com",
-  "Contrasenia": "$2b$10$EE8XJv7xMRKB1RkLWHMsTu5ROHO6g1it4hOGpV2d9UyASiD7s1Bei",
-  "Categoria": "Cliente",
-  "Imagen": "avatar-1594586677825.jpg",
-  "id": 2
- },
- {
-  "Nombre": "Admin",
-  "Apellido": "Admin",
-  "Email": "admin@gmail.com",
-  "Contrasenia": "$2b$10$XbE7gIRvGoAZRSlk9qOet.8dlli5BHbq/kETv4VqAseUvVsp4j8jK",
-  "Categoria": "Admin",
-  "Imagen": "avatar-1594577608797.jpg",
-  "id": 1
+  "Contrasenia": "$2b$10$subbpSpfV5JTGjn0ViXG/.umREHpxxle37Z50kFuxb3Oc.vIMauKu",
+  "Categoria": "cliente",
+  "Imagen": "avatar-1595105999008.jpg",
+  "id": 4
  },
  {
   "Nombre": "pato",
   "Apellido": "pato",
   "Email": "pato@gmail.com",
-  "Contrasenia": "$2b$10$ub/z6fz940e/iQpYgJ008u/xXqolaTjRqwNC1vxDTuvaOEnmROOHu",
+  "Contrasenia": "$2b$10$cFAiI2OShQ.G5UXvDGpPqOH4/pw0/bhwOZwUleyl9Oq5DYBFupHMm",
   "Categoria": "cliente",
-  "Imagen": "avatar-1594731229928.jpg",
-  "id": 4
+  "Imagen": "avatar-1595109432055.jpg",
+  "id": 5
  }
 ]

@@ -17,22 +17,22 @@
 
     <div class="navbar-nav text-center">
 
-      <% if(typeof user == 'undefined'){ %>
+      <% if (typeof user != 'undefined') {%>
 
-      <a class="nav-item nav-link" href="/users/login">Ingresar</a>
-      <a class="nav-item nav-link" href="/users/register">Registrarse</a>
-
-      
-
-      <% } else { %>
+     
   
       <a class="nav-item nav-link" href="/users/profile">Perfil</a>
       <a class="nav-item nav-link" href="#">
         <i class="fa fa-shopping-cart fa-1x"></i>
       </a>
       <a class="nav-item nav-link" href="/users/logout">Salir</a>
-  
-      <% } %> 
+
+      <% } else {%>
+
+      <a class="nav-item nav-link" href="/users/login">Ingresar</a>
+      <a class="nav-item nav-link" href="/users/register">Registrarse</a>
+
+      <% } %>
 
     </div>
    

@@ -22,6 +22,12 @@
     </div>
     <% } %>
 
+    <!-------------------------------------------------->
+    <% if (typeof data.mensaje != "undefined") { %>
+    <div class="alert alert-success" role="alert">
+      <%= data.mensaje %>
+    </div>
+    <% } %>
     <!----------------------Formulario de Ingreos------------------------->
 
     <% if(data.Formulario == 'UsuarioRegistrado') { %>
