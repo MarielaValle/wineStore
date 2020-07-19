@@ -7,20 +7,20 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarToggler01">
-    
+
     <div class="navbar-nav mr-auto text-center">
       <a class="nav-item nav-link" href="/">Home</a>
       <a class="nav-item nav-link" href="/products">Productos</a>
     </div>
 
-   
+
 
     <div class="navbar-nav text-center">
 
       <% if (typeof user != 'undefined') {%>
 
-     
-  
+
+
       <a class="nav-item nav-link" href="/users/profile">Perfil</a>
       <a class="nav-item nav-link" href="#">
         <i class="fa fa-shopping-cart fa-1x"></i>
@@ -35,10 +35,10 @@
       <% } %>
 
     </div>
-   
+
 
   </div>
- 
+
   <form class="form-inline form-buscar mr-sm-12 mr-md-12 mr-lg-12" action="/search" method="GET">
     <input class="form-control inp-buscar" type="text" name="keywords" placeholder="Buscar" />
     <button class="btn btn-success btn-buscar" type="submit">

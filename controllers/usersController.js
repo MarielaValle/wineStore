@@ -51,7 +51,7 @@ let usersController = {
 },
 
 
-  registroForm: (req, res) => {
+ registroForm: (req, res) => {
     let data = {
   Formulario: "FormularioRegistro",
 };
@@ -80,23 +80,37 @@ registrarse: (req, res) => {
 
     let imagen = req.file.filename; // se toma el nombre del archivo
     if (contrasenia == contrasenia2) {
-
+      
       contrasenia = bcrypt.hashSync(contrasenia, 10);
-
-      modelUsers.Alta(nombre, apellido, email, contrasenia, categoria, imagen);
-      res.redirect("/users/login");
-    } else {
-
+    }else{
       let data = { Formulario: 'FormularioRegistro' };
       res.render("usuarios", { data: data, errores: [{ msg: 'Las contraseñas no coinciden' }] });
-    }
 
+    }
+    
+      let usuarioExistente = modelUsers.Consulta(email);
+    if (usuarioExistente == null ){
+      modelUsers.Alta(nombre, apellido, email, contrasenia, categoria, imagen);
+      
+
+      let data = { 
+        Formulario: "UsuarioRegistrado" ,
+        mensaje:'Se registró correctamente por favor ingrese para loguearse'
+      }
+      res.render("usuarios", { data:data });
+
+    } else{
+      let data = { Formulario: 'FormularioRegistro' };
+      res.render("usuarios", { data: data, errores: [{ msg: 'El email ya existe' }] });
+
+
+    }
 
   } else {
 
     let data = { Formulario: 'FormularioRegistro' };
 
-    res.render("usuarios", { data: data, errores: errores.errors });
+      res.render("usuarios", { data: data, errores: errores.errors });
   }
 },
   //
@@ -127,8 +141,8 @@ registrarse: (req, res) => {
 
 
     logout: (req, res) => {
-        
-        req.session.user = undefined;
+        user=undefined
+        req.session.user = user;
         
 
         let data = { 
