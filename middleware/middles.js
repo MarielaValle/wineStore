@@ -1,7 +1,7 @@
-//var cargaProducto = require('./cargaProducto'); está puesto directo en router
+//var cargaProducto = require('./cargaProducto'); 
 var cargaAvatar = require('./cargaAvatar');
 
 module.exports = {
-    //CargaProducto: cargaProducto, está puesto directo en router
+    //CargarProducto: cargaProducto, 
     CargarAvatar: cargaAvatar,
 };

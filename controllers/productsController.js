@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-//var db = require('../database/models/index.js');
+var db = require('../database/models/index.js');
 
 
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const productsFilePath = path.join(__dirname, '../data/productos.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 saveProducts = function () {
 
@@ -20,12 +20,12 @@ saveProducts = function () {
 let productsController = {
 
 	// con json	 
-	raiz: (req, res) => {
+	/*raiz: (req, res) => {
 
 		res.render("products", { products });
-	},
+	},*/
 	//con sequelize
-	/*    raiz: (req, res) => {
+	   raiz: (req, res) => {
 
 		db.sequelize.query('SELECT * FROM productos')
 	
@@ -37,7 +37,7 @@ let productsController = {
 		  res.render('products',{products})
 		},
 		  
-	*/
+	
 
 
 	detail: (req, res) => {
@@ -65,7 +65,7 @@ let productsController = {
 	crear: (req, res, next) => {      //crear producto nuevo
 		let lastId = products.length;
 
-		const productToCreate = {
+		let productToCreate = {
 			id: lastId + 1,
 			nombre: req.body.nombre,
 			color: req.body.color,
@@ -77,19 +77,16 @@ let productsController = {
 			crianza: req.body.crianza,
 			descripcionLarga: req.body.descripcionLarga,
 			característica: req.body.característica,
-			imagen:' '
-			
+            
 		};
-		
-		
-		if (typeof req.file === 'undefined'){
-			productToCreate.imagen='agregarImagen.jpg'
-		}else{
-			productToCreate.imagen=req.files[0].filename
+		let imagen;
+		if (typeof req.file === 'undefined') {
+			imagen = 'agregarImagen.jpg';
+		} else {
+			imagen = req.files[0].filename; // se toma el nombre del archivo
 		}
-		
-		  
-	  
+        productToCreate.imagen = imagen
+
 
 		products.push(productToCreate);
 		saveProducts(products)

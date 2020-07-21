@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-//var middles = require('../middlewares/middles');
-
+const productsController = require('../controllers/productsController');
+//var middles = require("../middleware/middles");
 
 var multer = require('multer');
 var path = require('path');
@@ -20,7 +20,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 
-const productsController = require('../controllers/productsController');
+
 
 /* GET home page. */
 
