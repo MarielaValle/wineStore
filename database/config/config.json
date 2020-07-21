@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "ejercicio-sequelize-con-winestore",
+    "password": "casi1506",
+    "database": "database_winestore",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

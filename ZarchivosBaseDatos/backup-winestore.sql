@@ -7,6 +7,8 @@ USE database_winestore;
 
 #creo tabla productos
 
+DROP TABLE IF EXISTS productos;
+
  CREATE TABLE productos(
   id_producto INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(100) NULL,
@@ -44,6 +46,7 @@ INSERT INTO productos VALUES
 
 UNLOCK TABLES;
 
+DROP TABLE IF EXISTS usuarios;
 
 CREATE TABLE usuarios (
   id_usuario INT NOT NULL AUTO_INCREMENT,
@@ -65,7 +68,9 @@ INSERT INTO usuarios VALUES (1,'cliente','cliente','cliente@gmail.com','$2b$10$s
 
 UNLOCK TABLES;
 
-CREATE TABLE carrito (
+DROP TABLE IF EXISTS carritos;
+
+CREATE TABLE carritos (
   id_carrito INT NOT NULL AUTO_INCREMENT,
    id_usuario INT NULL,
   id_producto INT NULL,

@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) =>{
     let cols={
   
    
-          id:{
+          id_producto:{
   
               primaryKey:true,
               autoIncrement:true,
