@@ -1,5 +1,14 @@
 [
  {
+  "Nombre": "mari",
+  "Apellido": "mari",
+  "Email": "mari@gmail.com",
+  "Contrasenia": "$2b$10$e07G8aP5VyIAKh2tLTmXhOrPh07dL4oLKQgfaW3RU1cIlKRlKYSOK",
+  "Categoria": "cliente",
+  "Imagen": "avatar3.png",
+  "id": 7
+ },
+ {
   "Nombre": "caro",
   "Apellido": "caro",
   "Email": "caro@gmail.com",
@@ -27,12 +36,12 @@
   "id": 4
  },
  {
-  "Nombre": "mari",
-  "Apellido": "mari",
-  "Email": "mari@gmail.com",
-  "Contrasenia": "$2b$10$e07G8aP5VyIAKh2tLTmXhOrPh07dL4oLKQgfaW3RU1cIlKRlKYSOK",
+  "Nombre": "mariela",
+  "Apellido": "mariela",
+  "Email": "mariela@gmail.com",
+  "Contrasenia": "12345678",
   "Categoria": "cliente",
   "Imagen": "avatar3.png",
-  "id": 7
+  "id": 8
  }
 ]

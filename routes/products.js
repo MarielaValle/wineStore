@@ -31,18 +31,19 @@ router.get('/detail/:id', productsController.detail);
 
 
 /*** CREATE ONE PRODUCT ***/
-//router.get('/create/', productsController.formAlta); /* GET - Form to create */
-//router.post('/create/', productsController.store); /* POST - Store in json o DB? */
+router.get('/create/', productsController.formAlta); /* GET - Form to create */
+router.post('/create/', upload.any(),productsController.crear); /* POST - Store in json o DB? */
 
 //router.post('/create', upload.any(), productsController.crear);
 
 /*** EDIT ONE PRODUCT ***/
-//router.get('/edit/:productId', productsController.edit); /* GET - Form to create */
-//router.put('/edit/:productId', upload.any(), productsController.update); /* PUT - Update in DB */
+//con Json poner /edit/:productID!!!
+router.get('/edit/:id', productsController.edit); /* GET - Form to create */
+router.put('/edit/:id', upload.any(), productsController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/
-//router.get('/delete/:productId', productsController.delete);
-//router.delete('/delete/:productId', productsController.destroy);
+router.get('/delete/:id', productsController.delete);
+router.delete('/delete/:id', productsController.destroy);
 
 
 module.exports = router;
