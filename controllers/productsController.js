@@ -150,8 +150,11 @@ let productsController = {
 		res.redirect('/products/' );
 		 
 
-	}
+	},
 
+	carrito: (req, res) => {
+		res.render('carrito');
+	}
 }
 
 module.exports = productsController;    
