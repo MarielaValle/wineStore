@@ -1,3 +1,5 @@
+//en Json en routes de productos en vez de id hay que poner prodcutId
+
 const fs = require('fs');
 const path = require('path');
 
@@ -150,8 +152,9 @@ let productsController = {
 		saveProducts(products);
 
 		res.send("Eliminado!");
-	}
+	},
 
+	
 
 
 }

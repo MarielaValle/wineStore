@@ -1,5 +1,6 @@
 var db = require('../database/models/index.js');
 const { Sequelize } = require('../database/models/index.js');
+const { userInfo } = require('os');
 
 
 
@@ -146,15 +147,58 @@ let productsController = {
 				id: req.params.id
 			}
 		})
-		
-		res.redirect('/products/' );
-		 
+
+		res.redirect('/products/');
+
 
 	},
 
 	carrito: (req, res) => {
-		res.render('carrito');
-	}
+
+		db.Carrito.findAll({
+
+			where:{
+             id_usuario=req.session.user.id
+
+			},
+        include:['Producto','Usuario']
+
+		})
+		.then(function(userCarrito){
+           
+               return res.render('carrito',{userCarrito})
+		})
+
+	
+	},
+
+
+	carritoAdd: (req, res) => {
+
+
+		db.Producto.findByPk(req.params.id)
+
+			.then(function (producto) {
+
+				let Item = {
+
+					id_usuario: req.session.user.id,
+					id_producto: producto.id,
+					precio_venta: producto.precio,
+					cantidad: req.body.cantidad,
+				};
+
+				db.Carrito.create(Item)
+					.then(function (Item) {
+
+						return res.redirect('/products/carrito')
+
+					})
+
+
+			}
+		}
+
 }
 
 module.exports = productsController;    

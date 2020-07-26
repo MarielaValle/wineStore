@@ -1,3 +1,6 @@
+
+//nota en Json en la vista usuarios ->profie hay que poner en mayúsucula data.User.Nombre, (la N de nombre)
+
 var modelUsers = require("../data/users.js");
 
 
