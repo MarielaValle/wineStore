@@ -154,50 +154,75 @@ let productsController = {
 	},
 
 	carrito: (req, res) => {
+		user = req.session.user;
+		if (typeof user != 'undefined') {
+			db.Carrito.findAll({
 
-		db.Carrito.findAll({
+				where: {
+					id_usuario: user.id
+				},
+				include: ['Producto', 'Usuario']
 
-			where:{
-             id_usuario=req.session.user.id
+			  })
+				.then(function (userCarrito) {
 
-			},
-        include:['Producto','Usuario']
+					return res.render('carrito', { userCarrito })
+				})
+				.catch(error => console.log(error));
 
-		})
-		.then(function(userCarrito){
-           
-               return res.render('carrito',{userCarrito})
-		})
+				}else {
+			let data = {
+				Formulario: "UsuarioRegistrado",
+				mensaje: 'Debe loguearse para comprar y/o registrarse antes'
 
-	
+			};
+
+			res.render("usuarios", { data: data });
+		}
 	},
+
+
 
 
 	carritoAdd: (req, res) => {
 
+		user = req.session.user
+		if (typeof user != 'undefined') {
 
-		db.Producto.findByPk(req.params.id)
+			db.Producto.findByPk(req.params.id)
+				.then(function (producto) {
 
-			.then(function (producto) {
+					let Item = {
 
-				let Item = {
+						id_usuario: user.id,
+						id_producto: producto.id,
+						precio_venta: producto.precio,
+						cantidad: req.body.cantidad,
+					};
 
-					id_usuario: req.session.user.id,
-					id_producto: producto.id,
-					precio_venta: producto.precio,
-					cantidad: req.body.cantidad,
-				};
+					db.Carrito.create(Item)
+						.then(function (Item) {
 
-				db.Carrito.create(Item)
-					.then(function (Item) {
+							return res.redirect('/products/carrito')
 
-						return res.redirect('/products/carrito')
+						})
 
-					})
+				})
+				.catch(error => console.log(error));
 
+		} else {
+			let data = {
+				Formulario: "UsuarioRegistrado",
+				mensaje: 'Debe loguearse para comprar y/o registrarse antes'
 
-			}
+			};
+
+			res.render("usuarios", { data: data });
 		}
+
+	}
+
+
 
 }
 

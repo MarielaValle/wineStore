@@ -7,38 +7,38 @@
 
 <div class="container">
 
+  <form action='products/carrito/<%= producto.id %>' method='POST'>
+    <div class="row align-items-center pt-5 pb-5 rounded">
 
-  <div class="row align-items-center pt-5 pb-5 rounded">
+
+   
+      <div class="col-12 col-md-6 text-center pt-5 ">
+
+        <img class="" src="/images/productos/<%= producto.imagen%>" />
+
+      </div>
 
     
-<form action='/products/carrito/<%= producto.id %>' method='POST' >
-    <div class="col-12 col-md-6 text-center pt-5 ">
-
-      <img class="" src="/images/productos/<%= producto.imagen%>" />
-
-    </div>
-    <div class="col-12 col-md-6 text-center text-md-left pt-5">
+      <div class="col-12 col-md-6 text-center text-md-left pt-5">
 
 
-
-
-      <div class="form-group">
-        <h2>Color: <%= producto.color%></h2>
-        <p>Nombre: <%= producto.nombre %></p>
-        <p>Descripcion: <%= producto.descripcionCorta %></p>
-        <p>Crianza: <%= producto.crianza %></p>
-        <p>Variedad: <%= producto.variedad %></p>
-        <p>Precio:$ <%= producto.precio %></p>
-        <p>cantidad:<%= producto.cantidad %></p>
+        <div class="form-group">
+          <h2>Color: <%= producto.color%></h2>
+          <p>Nombre: <%= producto.nombre %></p>
+          <p>Descripcion: <%= producto.descripcionCorta %></p>
+          <p>Crianza: <%= producto.crianza %></p>
+          <p>Variedad: <%= producto.variedad %></p>
+          <p>Precio:$ <%= producto.precio %></p>
+          <p>cantidad:<%= producto.cantidad %></p>
+        </div>
+        <button type="submit" class="btn btn-secondary">
+          Agregar al Carrito
+        </button>
       </div>
-      <button type="submit" class="btn btn-secondary">
-        Agregar al Carrito
-      </button>
-    </div>
 
-  </form>
+   
   </div>
-
+</form>
 </div>
 
 

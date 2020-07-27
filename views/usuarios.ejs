@@ -32,7 +32,7 @@
 
     <% if(data.Formulario == 'UsuarioRegistrado') { %>
     <h3 class="pb-3">Ingresar</h3>
-    <form action="login" method="POST">
+    <form action="/users/login/" method="POST">
       <div class="form-group">
         <label for="nombre">Email:</label>
         <input type="email" name="email" id="email" class="form-control" />
@@ -51,7 +51,7 @@
 
     <h3 class="pb-3">Registrarse</h3>
 
-    <form action="register" method="POST" enctype="multipart/form-data">
+    <form action="/users/register/" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" />
