@@ -11,6 +11,7 @@ var session = require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+var dashboardRouter = require('./routes/dashboard');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(session( { secret: 'grupo4', resave: true, saveUninitialized: true}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/dashboard',dashboardRouter)
 
 
 
