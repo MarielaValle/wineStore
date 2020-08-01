@@ -147,14 +147,106 @@ variedad: (req, res) => {
 
                 variedad = resultados[0];
                 console.log(variedad)
-				res.render('dashboard', { variedad})
+               
+                res.send(variedad)
+				//res.render('dashboard',{variedad} )
 
 			})
 
 			.catch(error => console.log(error));
 
 
-        }
+        },
+
+
+        sumatoriaPrecios: (req, res) => {
+
+        db.Producto.sum('precio')
+        .then(function(resultado){
+
+           res.send(resultado)
+            
+           
+        })
+        .catch(error => console.log(error));
+           
+        },
+
+        cantidadProductos: (req, res) => {
+
+            db.Producto.count('id')
+
+            .then(function(resultado){
+
+                totalProductos=resultado
+
+               console.log(resultado)
+
+               res.render('dashboard',{totalProductos})
+                
+               
+            })
+            .catch(error => console.log(error));
+               
+            },
+    
+    
+        
+
+        cantidadUsuarios: (req, res) => {
+
+            db.Usuario.count('id')
+
+            .then(function(resultado){
+                totalUsuarios=resultado
+               console.log(resultado)
+
+               res.render('dashboard',{totalUsuarios})
+                
+               
+            })
+            .catch(error => console.log(error));
+               
+            },
+            precioMax: (req, res) => {
+
+                db.Producto.max('precio')
+    
+                .then(function(resultado){
+                    
+                   console.log(resultado)
+    
+                   //res.render('dashboard',{resultado})
+                    
+                   
+                })
+                .catch(error => console.log(error));
+                   
+                },
+
+                precioMin: (req, res) => {
+
+                    db.Producto.min('precio')
+        
+                    .then(function(resultado){
+                        
+                       console.log(resultado)
+        
+                       //res.render('dashboard',{resultado})
+                        
+                       
+                    })
+                    .catch(error => console.log(error));
+                       
+                    }
+        
+
+    
+    
+            
+    
+
+
 
     
 }
