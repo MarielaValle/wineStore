@@ -52,7 +52,11 @@ module.exports = (sequelize, dataTypes) =>{
       }
       const Usuario = sequelize.define(alias,cols,config);
           
-     
+      Usuario.associate = (models) => {
+      
+        Usuario.belongsTo(models.Carrito, { foreingKey: 'usuario_id', as: 'Usuario' });
+        
+     }
   
       return Usuario;
   

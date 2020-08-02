@@ -72,7 +72,11 @@ module.exports = (sequelize, dataTypes) =>{
           timestamps: false
       }
       const Producto = sequelize.define(alias,cols,config);
-          
+
+     Producto.associate = (models) => {
+     Producto.hasMany(models.Carrito, { foreingKey: 'producto_id', as: 'Producto' });
+        
+     }    
      
   
       return Producto;
