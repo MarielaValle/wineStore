@@ -32,4 +32,5 @@ router.get('/precioMaximo', apiDashboardController.precioMax);
 
 router.get('/precioMinimo', apiDashboardController.precioMin);
 
+
 module.exports = router;
