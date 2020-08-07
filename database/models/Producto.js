@@ -74,7 +74,7 @@ module.exports = (sequelize, dataTypes) =>{
       const Producto = sequelize.define(alias,cols,config);
 
      Producto.associate = (models) => {
-     Producto.hasMany(models.Carrito, { foreingKey: 'producto_id', as: 'Producto' });
+     Producto.hasMany(models.Carrito, { as: 'Producto' });
         
      }    
      

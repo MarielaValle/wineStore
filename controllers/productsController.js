@@ -24,8 +24,8 @@ let productsController = {
 
 raiz: (req, res) => {
 	db.Producto.findAll()
-		.then(productos => {
-			products=productos
+		.then(products => {
+			//products=productos
 			res.render("products", {products});
 		})
 		.catch(error => console.log(error));

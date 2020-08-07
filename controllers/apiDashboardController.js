@@ -2,6 +2,7 @@ var db = require('../database/models/index.js');
 const { Sequelize } = require('../database/models/index.js');
 
 
+
 let apiDashboardController = {
 
     raiz: (req, res) => {
@@ -26,8 +27,8 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/colorTinto'
-
+                      url:'localhost:3000/dashboard/colorTinto'
+                      
                     },
                     data:productos.length
                 };
@@ -59,7 +60,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/colorBlanco'
+                      url:'localhost:3000/dashboard/colorBlanco'
 
                     },
                     data:productos.length
@@ -91,7 +92,7 @@ let apiDashboardController = {
                     let respuesta={
                         meta:{
                           status:200,
-                          url:'(localhost:3000/dashboard/categoriaPremium'
+                          url:'localhost:3000/dashboard/categoriaPremium'
     
                         },
                         data:productos.length
@@ -124,7 +125,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/categoriaClasico'
+                      url:'localhost:3000/dashboard/categoriaClasico'
 
                     },
                     data:productos.length
@@ -167,7 +168,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/variedad',
+                      url:'localhost:3000/dashboard/variedad',
                       cantidadVariedades:variedad.length
 
                     },
@@ -192,7 +193,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/sumatoriaPrecios',
+                      url:'localhost:3000/dashboard/sumatoriaPrecios',
                       
 
                     },
@@ -219,7 +220,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/cantidadProductos',
+                      url:'localhost:3000/dashboard/cantidadProductos',
                       
 
                     },
@@ -248,7 +249,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/cantidadUsuarios',
+                      url:'localhost:3000/dashboard/cantidadUsuarios',
                       
 
                     },
@@ -270,7 +271,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/precioMaximo',
+                      url:'localhost:3000/dashboard/precioMaximo',
                       
 
                     },
@@ -294,7 +295,7 @@ let apiDashboardController = {
                 let respuesta={
                     meta:{
                       status:200,
-                      url:'(localhost:3000/dashboard/precioMinimo',
+                      url:'localhost:3000/dashboard/precioMinimo',
                      
 
                     },
