@@ -23,20 +23,16 @@ module.exports = (sequelize, dataTypes) => {
          type: dataTypes.INTEGER
 
       },
-      fecha: {
-         type: dataTypes.DATE
-      },
-      cantidad: {
-         type: dataTypes.INTEGER
+      nombre_vino:{
+         type:dataTypes.STRING(100)
 
-      },
+       },
+      
       precio_venta: {
 
          type: dataTypes.INTEGER
-      },
-      numero_ticket: {
-         type: dataTypes.INTEGER
       }
+     
 
 
    }
@@ -47,8 +43,8 @@ module.exports = (sequelize, dataTypes) => {
    const Carrito = sequelize.define(alias, cols, config);
 
    Carrito.associate = (models) => {
-      Carrito.belongsTo(models.Producto, { foreingKey: 'id_producto', as: 'Producto' });
-      Carrito.belongsTo(models.Usuario, { foreingKey: 'id_usuario', as: 'Usuario' });
+      Carrito.belongsTo(models.Producto, { foreignKey: 'id_producto', as: 'Producto' });
+      Carrito.belongsTo(models.Usuario, { foreignKey: 'id_usuario', as: 'Usuario' });
    }
 
    return Carrito;

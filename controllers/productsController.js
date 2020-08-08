@@ -167,6 +167,8 @@ raiz: (req, res) => {
 	carrito: (req, res) => {
 		user = req.session.user;
 		if (typeof user != 'undefined') {
+
+
 			db.Carrito.findAll({
 
 				where: {
@@ -175,13 +177,20 @@ raiz: (req, res) => {
 				include: ['Producto', 'Usuario']
 
 			  })
-				.then(function (userCarrito) {
-
-					return res.render('carrito', { userCarrito })
+				.then(function (userCart) {
+                   console.log(userCart)
+					return res.render('carrito', { userCart })
 				})
+				
+				
+				
+				
 				.catch(error => console.log(error));
 
-				}else {
+				}
+				
+				
+			else {
 			let data = {
 				Formulario: "UsuarioRegistrado",
 				mensaje: 'Debe loguearse para comprar y/o registrarse antes'
@@ -207,14 +216,15 @@ raiz: (req, res) => {
 
 						id_usuario: user.id,
 						id_producto: producto.id,
-						precio_venta: producto.precio,
-						cantidad: req.body.cantidad,
+						nombre_vino:producto.nombre,
+						precio_venta: producto.precio
+						
 					};
 
 					db.Carrito.create(Item)
 						.then(function (Item) {
 
-							return res.redirect('/products/carrito')
+							return res.redirect('/products/carrito/<%=user.id%>')
 
 						})
 
