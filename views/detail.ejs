@@ -18,6 +18,8 @@
 
       </div>
 
+      
+
     
       <div class="col-12 col-md-6 text-center text-md-left pt-5">
 
@@ -31,14 +33,28 @@
           <p>Precio:$ <%= producto.precio %></p>
           <p>cantidad:<%= producto.cantidad %></p>
         </div>
+
+        <% if ( user.categoria == 'cliente') { %>
         <button type="submit" class="btn btn-secondary">
           Agregar al Carrito
         </button>
-      </div>
+       <% } %>
 
-   
+       <% if (user.categoria == 'admin'|| 'dueño') { %>
+          <div class="col-12">
+              <a href='/products/edit/<%= producto.id%>/'type="button" class="btn btn-warning" id='dos'>Editar Producto</a>
+          
+          
+              <a href='/products/delete/<%= producto.id%>/'type="button" class="btn btn-danger" id='dos'>Eliminar Producto</a>
+      
+            </div>
+            <% } %>
+      </div>
+      
   </div>
 </form>
+
+
 </div>
 
 

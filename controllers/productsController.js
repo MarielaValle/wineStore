@@ -34,19 +34,20 @@ raiz: (req, res) => {
 
 
 	detail: (req, res) => {
-
+        user=req.session.user
 		db.Producto.findByPk(req.params.id)
 
 			.then(function (producto) {
 
 
 
-				res.render('detail', { producto });
+				res.render('detail', { producto,user });
 
 			})
 			.catch(error => console.log(error));
 	},
 
+	
 
 	formAlta: (req, res) => {
 		let data = {
@@ -139,7 +140,9 @@ raiz: (req, res) => {
 
 	delete: (req, res) => {
 		db.Producto.findByPk(req.params.id)
-			.then(function (product) {
+			.then(function (producto) {
+				product = producto;
+
 				let data = {
 					Formulario: 'DeleteProducto',
 

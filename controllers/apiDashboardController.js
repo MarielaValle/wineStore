@@ -5,11 +5,7 @@ const { Sequelize } = require('../database/models/index.js');
 
 let apiDashboardController = {
 
-    raiz: (req, res) => {
-
-
-        res.render("dashboard");
-    },
+    
 
 
     colorTinto: (req, res) => {

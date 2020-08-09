@@ -24,6 +24,11 @@
       <a class="nav-item nav-link" href="/products/carrito/<%=user.id%>">
         <i class="fa fa-shopping-cart fa-1x"></i>
       </a>
+
+      <% if ( user.categoria == 'admin'||'dueño') { %>
+      <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+      <% } %>
+
       <a class="nav-item nav-link" href="/users/logout">Salir</a>
 
       <% } else {%>

@@ -9,12 +9,21 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let indexController={
 
-    raiz: (req, res) => {
+   raiz: (req, res) => {
 
       let productosRecomendados = products.filter(product=>product.característica==='Recomendado')
 		
 		res.render("index",{productosRecomendados});
     },
+
+    dashboard: (req, res) => {
+     user=req.session.user
+
+      res.render("dashboard",{user});
+  },
+  
+  
+
     search: (req, res) => {
       // Do the magic
         const results = [];
@@ -25,8 +34,8 @@ let indexController={
         });
         res.render("results", {results, search: req.query.keywords});
       }
-    
-    
+
+     
 }
 
 module.exports=indexController;

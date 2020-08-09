@@ -1,11 +1,10 @@
-
 <%- include("partials/head")%>
 <%- include("partials/header")%>
 
 
 <!------------------mensajes de éxito-------------------------------->
 <div style='text-align: center;'>
-<% if (typeof data.mensaje != "undefined") { %>
+  <% if (typeof data.mensaje != "undefined") { %>
   <div class="alert alert-success" role="alert">
     <%= data.mensaje %>
   </div>
@@ -14,42 +13,35 @@
 <!--------------------Agregar Producto---------------------------------------->
 <% if(data.Formulario == 'NuevoProducto'){ %>
 
-  <%- include("./forms/nuevoProducto")%>
-  
-  <% } %>
-  
+<%- include("./forms/nuevoProducto")%>
+
+<% } %>
+
 <!-----------------------Editar Producto------------------------------------->
 
-   <% if(data.Formulario == 'ModificarProducto'){ %>
+<% if(data.Formulario == 'ModificarProducto'){ %>
 
-  <%- include("./forms/modificarProducto")%>
+<%- include("./forms/modificarProducto")%>
+
+<% } %>
+
+<!-----------------------Eliminar Producto------------------------------------->
+
+
+<% if(data.Formulario == 'DeleteProducto'){ %>
+
+  <%- include("./forms/deleteProducto")%>
   
   <% } %>
 
-  <!-----------------------Eliminar Producto------------------------------------->
 
-  <% if(data.Formulario == 'DeleteProducto'){ %>
+<!-----------------------Detalle Producto recién modificado------------------------------------>
 
-    <%- include("./forms/deleteProducto")%>
-    
-    <% } %>
-  
- <!-----------------------Detalle Producto recién modificado------------------------------------>
+<% if(data.Formulario == 'DetalleProducto'){ %>
 
- <% if(data.Formulario == 'DetalleProducto'){ %>
+<%- include("./forms/detalleProducto")%>
 
-  <%- include("./forms/detalleProducto")%>
-  
-  <% } %>
+<% } %>
 
-  <!------------------------------------------------------------>
-  <%- include("partials/footer")%>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+<!------------------------------------------------------------>
+<%- include("partials/footer")%>

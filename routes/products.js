@@ -30,9 +30,11 @@ router.get('/', productsController.raiz);
 router.get('/detail/:id', productsController.detail);
 
 
+
+
 /*** CREATE ONE PRODUCT ***/
 router.get('/create/', productsController.formAlta); /* GET - Form to create */
-router.post('/create/', upload.any(),productsController.crear); /* POST - Store in json o DB? */
+router.post('/create/', upload.any(), productsController.crear); /* POST - Store in json o DB? */
 
 //router.post('/create', upload.any(), productsController.crear);
 
@@ -47,5 +49,5 @@ router.delete('/delete/:id', productsController.destroy);
 /***CARRITO***/
 router.get('/carrito/:id', productsController.carrito);
 router.post('/carrito/:id', productsController.carritoAdd);
- 
+
 module.exports = router;

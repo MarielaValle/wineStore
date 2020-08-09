@@ -8,6 +8,14 @@ const indexController = require('../controllers/indexController');
 
 router.get('/', indexController.raiz)
 
-router.get('/search/',indexController.search);
+/*** Página administracion productos ***/
+router.get('/dashboard/', indexController.dashboard);
+
+
+router.get('/search/', indexController.search);
+
+
+
+
 
 module.exports = router;
