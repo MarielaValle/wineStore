@@ -17,9 +17,9 @@ let indexController={
     },
 
     dashboard: (req, res) => {
-     user=req.session.user
+     
 
-      res.render("dashboard",{user});
+      res.render("dashboard");
   },
   
   
