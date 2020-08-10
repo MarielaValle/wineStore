@@ -71,7 +71,17 @@ let usersController = {
 
     },
 
+    registroAdmin:(req, res) => {
 
+        let data = {
+            Formulario: 'RegistroAdmin',
+            
+        }
+
+        res.render('formsUser', { data: data });
+
+
+    },
     registroForm: (req, res) => {
         let data = {
             Formulario: "FormularioRegistro",
@@ -81,6 +91,8 @@ let usersController = {
 
 
     },
+
+    
 
     // funcion para realizar el registro de nuevo ususario
     registrarse: (req, res) => {
@@ -118,12 +130,19 @@ let usersController = {
                             imagenAcargar = req.file.filename; // se toma el nombre del archivo
                         }
 
+                        let categoriaAcargar;
+                        if (typeof req.body.categoria === 'undefined') {
+                            categoriaAcargar = 'cliente';
+                        } else {
+                            categoriaAcargar = req.body.categoria; // se toma el nombre del archivo
+                        }
+
                         db.Usuario.create({
                             nombre: req.body.nombre,
                             apellido: req.body.apellido,
                             email: req.body.email,
                             contrasenia: contraseniaAcargar,
-                            categoria: req.body.categoria,
+                            categoria: categoriaAcargar,
                             imagen: imagenAcargar
                         });
 

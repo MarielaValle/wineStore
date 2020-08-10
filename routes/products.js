@@ -30,13 +30,11 @@ router.get('/', productsController.raiz);
 router.get('/detail/:id', productsController.detail);
 
 
-
-
 /*** CREATE ONE PRODUCT ***/
 router.get('/create/', productsController.formAlta); /* GET - Form to create */
 router.post('/create/', upload.any(), productsController.crear); /* POST - Store in json o DB? */
 
-//router.post('/create', upload.any(), productsController.crear);
+
 
 /*** EDIT ONE PRODUCT ***/
 //con Json poner /edit/:productID!!!
