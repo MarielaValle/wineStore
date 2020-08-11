@@ -10,7 +10,7 @@ router.get("/login", usersController.loginForm);
 router.post("/login", usersController.login);
 
 
-router.get("/admin",usersController.registroAdmin)
+router.get("/admin",usersController.registroAdmin);
 router.get("/register", usersController.registroForm);
 
 router.post("/register", middles.CargarAvatar, [

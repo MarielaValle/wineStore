@@ -34,7 +34,15 @@ raiz: (req, res) => {
 
 
 	detail: (req, res) => {
-        user=req.session.user
+     if (req.session.user){
+		   user = req.session.user
+	 } else{
+
+		user={
+		   categoria:null
+	   }
+
+	}
 		db.Producto.findByPk(req.params.id)
 
 			.then(function (producto) {
@@ -45,16 +53,18 @@ raiz: (req, res) => {
 
 			})
 			.catch(error => console.log(error));
+		
 	},
 
 	
 
 	formAlta: (req, res) => {
+
 		let data = {
 			Formulario: 'NuevoProducto',
 		};
 		res.render('formProducto', { data: data });
-
+	
 	},
 
 

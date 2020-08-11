@@ -11,16 +11,16 @@
     <div class="row align-items-center pt-5 pb-5 rounded">
 
 
-   
+
       <div class="col-12 col-md-6 text-center pt-5 ">
 
         <img class="" src="/images/productos/<%= producto.imagen%>" />
 
       </div>
 
-      
 
-    
+
+
       <div class="col-12 col-md-6 text-center text-md-left pt-5">
 
 
@@ -34,25 +34,33 @@
           <p>cantidad:<%= producto.cantidad %></p>
         </div>
 
+        <% if ( user.categoria == null) { %>
+          <button type="submit" class="btn btn-secondary">
+            Agregar al Carrito
+          </button>
+          <% } %>
+       
+
         <% if ( user.categoria == 'cliente') { %>
         <button type="submit" class="btn btn-secondary">
           Agregar al Carrito
         </button>
-       <% } %>
+        <% } %>
 
-       <% if (user.categoria == 'admin') { %>
-          <div class="col-12">
-              <a href='/products/edit/<%= producto.id%>/'type="button" class="btn btn-warning" id='dos'>Editar Producto</a>
-          
-          
-              <a href='/products/delete/<%= producto.id%>/'type="button" class="btn btn-danger" id='dos'>Eliminar Producto</a>
-      
-            </div>
-            <% } %>
+        <% if (user.categoria == 'admin'|| user.categoria== 'dueño') { %>
+        <div class="col-12">
+          <a href='/products/edit/<%= producto.id%>/' type="button" class="btn btn-warning" id='dos'>Editar Producto</a>
+
+
+          <a href='/products/delete/<%= producto.id%>/' type="button" class="btn btn-danger" id='dos'>Eliminar
+            Producto</a>
+
+        </div>
+        <% } %>
       </div>
-      
-  </div>
-</form>
+
+    </div>
+  </form>
 
 
 </div>
